@@ -23,15 +23,15 @@ const Header = () => {
 
 
   
-  const [url, setUrl] = useState("")
+  // const [url, setUrl] = useState("")
 
-  useEffect(() => {
-    fetch("https://python-backend-zs.herokuapp.com/item/get/1").then(response => response.json()).then((res2) => {
-      setUrl(res2.item_img);
-    })
+  // useEffect(() => {
+  //   fetch("https://python-backend-zs.herokuapp.com/item/get/1").then(response => response.json()).then((res2) => {
+  //     setUrl(res2.item_img);
+  //   })
     
     
-  }, [])
+  // }, [])
   
 
   return (
@@ -63,7 +63,7 @@ const Header = () => {
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
       >
-        <img src={url} alt="profile_bg" />
+        <img src={images.profile} alt="profile_bg" />
         <motion.img
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: 'easeInOut' }}
